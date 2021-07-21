@@ -1,0 +1,257 @@
+:root {
+  --off-white-color: #f7f1f0;
+  --grey-blue-color: #a9b7c0;
+  --minty-color: #c7d8c6;
+  --light-color: #efd9c1;
+  --powder-color: #cccbc6;
+  --martel-font: "Martel", serif;
+}
+/* Forum Post List */
+.forum-frame {
+  padding: 10px 0px 10px 0px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Forum Item */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.forum-item-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 5px;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+}
+h3 {
+  font-family: var(--martel-font);
+  margin: 0;
+}
+.card-root {
+  background-color: var(--light-color);
+  padding-bottom: 10px;
+}
+p.forum {
+  height: unset;
+  background-color: unset;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  font-weight: lighter;
+}
+p.stats {
+  height: unset;
+  background-color: unset;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Individual Forum View */
+.forum-view {
+  max-width: 900px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* background-color: var(--minty-color); */
+  margin-top: 10px;
+  border-radius: 10px 10px 0 0;
+}
+h4 {
+  font-family: var(--martel-font);
+  margin: 0;
+  font-weight: lighter;
+  padding-left: 10px;
+}
+h3 {
+  padding: 10px 10px 0px 10px;
+}
+.comment-item-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 5px;
+}
+
+/* Forum comments  */
+
+.comment-input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+}
+.comment-input {
+  background-color: var(--powder-color);
+  width: 100%;
+}
+.comment-button {
+  width: 50%;
+  text-align: center;
+  background-color: var(--powder-color);
+}
+.comment-button-label {
+  font-family: var(--martel-font);
+  font-weight: bold;
+  width: 100%;
+}
+.comment-button-container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.comment-spacer-top {
+  height: 20px;
+}
+.comment-spacer-bottom {
+  height: 500px;
+}
+
+/* Forum CRUD buttons */
+.edit-delete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--powder-color);
+  border-radius: 0px 5px 5px 0px;
+  flex-grow: 1;
+  overflow: hidden;
+  width: 60px;
+  animation-name: shrinkSide;
+  animation-duration: 0.25s;
+}
+@keyframes growSide {
+  from {
+    width: 60px;
+  }
+  to {
+    width: 100px;
+  }
+}
+@keyframes shrinkSide {
+  from {
+    width: 100px;
+  }
+  to {
+    width: 60px;
+  }
+}
+@keyframes opacity-transition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.grow-side {
+  width: 0px;
+  animation-name: growSide;
+  animation-duration: 0.25s;
+  width: 100px;
+}
+.opacity-anim {
+  animation-name: opacity-transition;
+  animation-duration: 0.25s;
+  height: 100%;
+  width: 100%;
+}
+.forum-crud-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.forum-crud-button {
+  font-family: var(--martel-font);
+  font-weight: bold;
+  background-color: var(--powder-color);
+  padding: 5px;
+  border-radius: 5px;
+}
+@keyframes threadOpen {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 140px;
+  }
+}
+@keyframes threadClose {
+  from {
+    height: 140px;
+  }
+  to {
+    height: 0px;
+  }
+}
+.forum-input {
+  height: 140px;
+  width: 500px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--powder-color);
+  border-radius: 5px;
+  animation-name: threadOpen;
+  animation-duration: 0.5s;
+}
+.forum-input-closing {
+  height: 0px;
+  animation-name: threadClose;
+  animation-duration: 0.5s;
+}
+.forum-input-textarea {
+  background-color: var(--powder-color);
+  border-radius: 5px;
+  width: 100%;
+}
+.forum-input-textarea__inputarea {
+  padding: 5px;
+}
+
+/* Other styling */
+.circular-progress {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@keyframes firstGrow {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 100px;
+    opacity: 1;
+  }
+}
+.first-comment {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: firstGrow;
+  animation-duration: 0.5s;
+  height: 100px;
+}

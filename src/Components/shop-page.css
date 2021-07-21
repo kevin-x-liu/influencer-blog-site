@@ -1,0 +1,20 @@
+:root {
+  --off-white-color: #f7f1f0;
+  --grey-blue-color: #a9b7c0;
+  --minty-color: #c7d8c6;
+  --light-color: #efd9c1;
+  --powder-color: #cccbc6;
+  --martel-font: "Martel", serif;
+}
+
+.cart-button {
+  color: solid var(--grey-blue-color);
+}
+
+.background {
+  color: var(--minty-color);
+}
+
+.purchaseButton {
+  color: var(--minty-color);
+}

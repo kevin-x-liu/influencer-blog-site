@@ -1,0 +1,232 @@
+:root {
+  --off-white-color: #f7f1f0;
+  --grey-blue-color: #a9b7c0;
+  --minty-color: #c7d8c6;
+  --light-color: #efd9c1;
+  --powder-color: #cccbc6;
+  --martel-font: "Martel", serif;
+}
+
+/* Navigation Bar and its elements */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--martel-font);
+  font-weight: bolder;
+  font-size: 45px;
+  margin: 0;
+  margin-top: 10px;
+}
+.header-img {
+  width: 80px;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  margin: auto;
+  color: black;
+  font-family: var(--martel-font);
+  border: solid var(--grey-blue-color);
+  border-width: 0px 0px 2px 0px;
+}
+.menu-button {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  border: solid var(--grey-blue-color);
+  border-width: 0px 0px 2px 0px;
+}
+
+.navbutton-group {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+@keyframes nav-background-fadein {
+  from {
+    background-color: rgb(169, 183, 192, 0);
+  }
+  to {
+    background-color: rgb(169, 183, 192, 1);
+  }
+}
+.navbutton--border {
+  border: solid var(--grey-blue-color);
+  border-width: 2px 2px 0px 2px;
+  border-radius: 5px 5px 0px 0px;
+  animation-name: nav-background-fadein;
+  animation-duration: 1s;
+  background-color: var(--grey-blue-color);
+}
+.navbutton-label {
+  font-size: 15px;
+  padding: 0px 10px 0px 10px;
+  font-family: var(--martel-font);
+  font-weight: bold;
+}
+@media (max-width: 900px) {
+  /* .menu-button {
+    display: block;
+  } */
+  .navbutton-label {
+    padding: 0px 2px 0px 2px;
+  }
+  .navbutton-group {
+    justify-content: flex-start;
+    flex-grow: 0;
+  }
+  .navbar {
+    padding-left: 10px;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 700px) {
+  .navbar {
+    display: none;
+  }
+  .menu-button {
+    display: flex;
+  }
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-bar__form {
+  background-color: var(--powder-color);
+  padding-left: 10px;
+  border-radius: 10px;
+}
+.social-icon {
+  width: 25px;
+  padding: 0 5px 0 5px;
+}
+.social-icon:hover {
+  cursor: pointer;
+}
+
+/* Featured Blog Section */
+
+/* Replace with grid */
+.featured-blogs {
+  display: grid;
+  grid-template-columns: 450px, 450px;
+  grid-auto-rows: 257px;
+  width: 900px;
+  gap: 10px;
+  margin: auto;
+}
+.featured-container--long {
+  padding-top: 10px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: 0;
+}
+.featured-container--short {
+  width: 445px;
+  /* height: 200px; */
+  overflow: hidden;
+  position: relative;
+  padding-top: 10px;
+  grid-column-start: 2;
+  margin: 0;
+}
+
+.featured-img--long {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 445px;
+  margin: 0;
+}
+.featured-img--short {
+  /* margin-top: 10px; */
+  /* border-radius: 10px; */
+  width: 445px;
+  height: 200px;
+  margin: 0;
+  animation-name: fadeInPost;
+  animation-duration: 0.5s;
+  object-fit: cover;
+}
+
+.featured-shop-img--short {
+  /* margin-top: 10px; */
+  /* border-radius: 10px; */
+  width: 445px;
+  height: 200px;
+  margin: 0;
+  animation-name: fadeInPost;
+  animation-duration: 0.5s;
+  object-fit: scale-down;
+  background-color: white;
+}
+@keyframes fadeOutPost {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(50%);
+  }
+}
+@keyframes fadeInPost {
+  from {
+    filter: brightness(50%);
+  }
+  to {
+    filter: brightness(100%);
+  }
+}
+.featured-img--short:hover {
+  animation-name: fadeOutPost;
+  animation-duration: 0.5s;
+  filter: brightness(50%);
+}
+/* @media (hover: hover) {
+  .overlaid-text:hover {
+    display: block;
+  }
+}
+.featured-img--short:hover .overlaid-text,
+.featured-img--short.hover .overlaid-text {
+  display: block;
+}
+.overlaid-text {
+  display: none;
+  position: fixed;
+  font-family: var(--martel-font);
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(255, 255, 255, 1);
+  background-color: red;
+} */
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: var(--martel-font);
+}
+.blurb {
+  font-family: var(--martel-font);
+  background-color: var(--minty-color);
+  border-radius: 10px;
+  margin: 0;
+  margin-top: 10px;
+  height: 115px;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Bottom elements */
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--light-color);
+  height: 70px;
+}
